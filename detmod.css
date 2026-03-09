@@ -1,0 +1,231 @@
+
+@font-face {
+    font-family: 'Avenir Book';
+    src: url('fonts/Avenir-Book.eot');
+    src: url('fonts/Avenir-Book.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Avenir-Book.woff') format('woff'),
+    url('fonts/Avenir-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Avenir';
+}
+
+
+/* Style the header */
+
+.header {
+  margin: auto;
+  height: 450px;
+  width: 700px;
+}
+
+.header img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+  
+}
+
+
+/* Left and right column */
+.column.left {
+  width: 20%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 75%;
+}
+
+.column.right {
+  width: 5%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+.footer {
+  margin: auto;
+  text-align:center;
+}
+
+/* Potential program schedule formatting
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+table.program {
+    border-collapse: collapse;
+    border: 2px solid white;
+    /* border-spacing: 2px; */
+    border-spacing: 0px 0px;
+    font-size: 14px;
+}
+
+table.program td {
+    padding: 5px 10px;
+    margin: 10px;
+    vertical-align: top;
+    border: 2px solid white;
+}
+
+td.time {
+    width: 20%;
+}
+
+
+td.authorsandtitle {
+    width: 80%;
+}
+
+tr.break {
+  background-color: #A7C7E7;
+}
+
+tr.talk {
+  background-color: #C1E1C1;
+}
+
+tr.invited {
+  background-color: #F8C471;
+}
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+
+
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px){
+  .column.left, .column.right, .column.middle{
+    width: 100%;
+  }
+  .header {
+        max-height: 200px;
+        width: 80%;
+    }
+  .footer {
+        max-height: 150px;
+        width: 80%;
+        text-align:center;
+    }
+}
+
+
+
+/*slideshow
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.rowslide:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.columnslide {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
